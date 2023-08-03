@@ -1,0 +1,118 @@
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .navbar{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .navbar  
+    .navbar-toggler{
+        display: block;
+    }
+    .d-none{
+        display: none !important;
+    }
+    .navbar-class{
+        width: 100%;
+        /* height: 93.9vh; */
+        padding-bottom: 100px;
+        top: 50px;
+        left: 0;
+        display: flex !important;
+        position: absolute;
+        flex-wrap: wrap !important;
+        background-color: #17b1a2 !important;
+    }
+}
+@media screen and (max-width:767px) {
+    .navbar{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .navbar  
+    .navbar-toggler{
+        display: block;
+    }
+    .d-none{
+        display: none !important;
+    }
+    .navbar-class{
+        width: 100%;
+        /* height: 93.9vh; */
+        padding-bottom: 100px;
+        top: 50px;
+        left: 0;
+        display: block !important;
+        position: absolute;
+        flex-wrap: wrap !important;
+        background-color: #17b1a2 !important;
+    }
+    .navbar-class li{
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 35px;
+        line-height: 35px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .navbar-class li a{
+        display: block;
+        margin-top: 10px;
+        padding: 0px 15px !important;
+    }
+}
+@media (min-width: 992px) {
+    .col-lg-auto {
+      flex: 0 0 auto;
+      width: auto;
+    }
+    .col-lg-1 {
+      flex: 0 0 auto;
+      width: 8.33333333%;
+    }
+    .col-lg-2 {
+      flex: 0 0 auto;
+      width: 16.66666667%;
+    }
+    .col-lg-3 {
+      flex: 0 0 auto;
+      width: 25%;
+    }
+    .col-lg-4 {
+      flex: 0 0 auto;
+      width: 33.33333333%;
+    }
+    .col-lg-5 {
+      flex: 0 0 auto;
+      width: 41.66666667%;
+    }
+    .col-lg-6 {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+    .col-lg-7 {
+      flex: 0 0 auto;
+      width: 58.33333333%;
+    }
+    .col-lg-8 {
+      flex: 0 0 auto;
+      width: 66.66666667%;
+    }
+    .col-lg-9 {
+      flex: 0 0 auto;
+      width: 75%;
+    }
+    .col-lg-10 {
+      flex: 0 0 auto;
+      width: 83.33333333%;
+    }
+    .col-lg-11 {
+      flex: 0 0 auto;
+      width: 91.66666667%;
+    }
+    .col-lg-12 {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+}

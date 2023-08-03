@@ -1,0 +1,45 @@
+{% load static %}
+<!-- Blog -->
+{% load static %}
+<div class="py-10">
+  {% for categories,posts in eachcategories.items %}
+  <div class="header-name py-20">
+    <span>{{categories.name}}</span>
+  </div>
+  <div class="row">
+    {% if posts %}
+     {% for post in posts %}
+    <div class="col-lg-4">
+      <div
+        class="image"
+        style="
+          background-image: url('{{post.image.url }}');
+          height: 230px;
+          background-size: cover;
+        "
+      >
+        <div class="category-hide">
+          <span class="float-start category-span">{{post.category.name}}</span
+          ><span class="float-end date-span"
+            >{{post.created|date:'M d,Y'}}</span
+          >
+        </div>
+      </div>
+      <h4 class="pb-20 pt-10 border-bottom">
+        <a href="{% url 'detail_page' post.slug %}" class="text-dark hover-link"
+          >{{post.long_content|truncatechars:100}}</a
+        >
+      </h4>
+    </div>
+
+    {% endfor %} 
+    {% else %}
+    <div>
+      <h4>Sorry! <span>There Is No Posts in This Category</span></h4>
+    </div>
+    {% endif %}
+ 
+  {% endfor %}
+   </div>
+</div>
+<!-- End Blog -->

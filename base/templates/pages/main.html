@@ -1,0 +1,43 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{% static 'css/main.css/' %}" />
+    <link rel="stylesheet" href="{% static 'css/media-query.min.css/' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <title>{% block title %}Arakha Star{% endblock title%}</title>
+    <!-- Boxicons JS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"
+      rel="stylesheet"
+    />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- start header -->
+    {% include 'header/header.html' %}
+    <!-- end header -->
+    
+    {% block content %} {% endblock content %}
+    <!-- Footer -->
+    {% include 'footer/footer.html' %}
+    <!-- End Footer -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

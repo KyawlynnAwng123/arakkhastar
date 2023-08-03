@@ -1,0 +1,24 @@
+{% extends 'pages/main.html' %} {% load static %} {% block content %} {% include
+'header/header.html'%}
+<!-- Main -->
+<main style="height: 98vh">
+  <div class="main-container">
+    <div class="pt-25">
+      <h1 class="fw-bold">
+        <span class="text-about">ABOUT</span>
+        <span class="text-danger">ARAKKHA STARS</span>
+      </h1>
+      <div class="row py-20">
+        <div class="col-lg-5">
+          <img src="{{about.image.url}}" class="img-fluid" alt="" />
+        </div>
+        <div class="col-lg-7">
+          <h3 class="pt-20">{{about.title}}</h3>
+          <div class="pt-25 line-height-20">{{about.content}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End Main -->
+{% include 'footer/footer.html' %} {% endblock content %}

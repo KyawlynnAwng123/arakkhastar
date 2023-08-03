@@ -1,0 +1,40 @@
+<!-- Header -->
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="{% url 'homepage' %}"><span>ARAKKHA STARS</span></a>
+    </div>
+    <ul>
+      <li class="navbar-toggler" id="navbar-toggler">
+        <a href="#">MENU</a>
+      </li>
+    </ul>
+    <ul class="d-none" id="navbar">
+      {% url 'homepage' as url %}
+      <li>
+        <a href="{% url 'homepage' %}" class="{% if request.path == url %}active{% endif %}">Home</a>
+      </li>
+
+      {% for category in categories %}
+      {% url 'eachcategories_page' category.slug as url %}
+      <li>
+        <a href="{% url 'eachcategories_page' category.slug %}"
+           class="{% if request.path == url %}active{% endif %}">{{category.name}}</a
+        >
+      </li>
+      {% endfor %}
+      
+      {% url 'contactpage' as url %}
+      <li>
+        <a href="{% url 'contactpage' %}" class="{% if request.path == url %}active{% endif %}">Contact</a>
+      </li>
+      {% url 'aboutpage' as url %}
+      <li>
+        <a href="{% url 'aboutpage' %}" class="{% if request.path == url %}active{% endif %}">About</a>
+      </li>
+
+      
+    </ul>
+  </nav>
+</header>
+<!-- End Header -->

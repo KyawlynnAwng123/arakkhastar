@@ -1,0 +1,30 @@
+{% load static %}
+<div class="py-10">
+  <div class="row">
+    {% for post in posts %}
+    <div class="col-lg-4">
+      <div
+        class="image"
+        style="
+          background-image: url('{{post.image.url}}');
+          height: 230px;
+          background-size: cover;
+        "
+      >
+        <div class="category-hide">
+          <span class="float-start category-span">{{post.category}}</span
+          ><span class="float-end date-span"
+            >{{post.created|date:'M d,Y'}}</span
+          >
+        </div>
+      </div>
+      <h5 class="pb-20 pt-10 border-bottom">
+        <a href="{% url 'detail_page' post.slug %}" class="text-dark hover-link"
+          >{{post.title | truncatechars:100}}</a
+        >
+      </h5>
+      
+    </div>
+    {% endfor %}
+  </div>
+</div>
